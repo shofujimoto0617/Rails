@@ -21,27 +21,31 @@ class TodolistsController < ApplicationController
 
   end
 
-    def show
+  def show
 
-    @list = List.find(params[:id])
+  @list = List.find(params[:id])
 
-    end
+  end
 
-    def edit
+  def edit
 
-    @list = List.find(params[:id])
+  @list = List.find(params[:id])
 
-    end
+  end
 
-    def update
+  def update
 
-    list = List.find(params[:id])
+  list = List.find(params[:id])
 
-    list.update(list_params)
+  list.update(list_params)
 
-    redirect_to todolist_path(list.id)
+  redirect_to todolist_path(list.id)
 
-    end
+  end
+
+  def destroy
+
+  end
 
   private
 
